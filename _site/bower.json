@@ -1,0 +1,19 @@
+{
+  "name": "Sustainable Computing Research",
+  "homepage": "https://github.com/scorelab/scorelab.github.io",
+  "authors": [
+    "Raveen <harith9127@gmail.com>"
+  ],
+  "description": "website",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
