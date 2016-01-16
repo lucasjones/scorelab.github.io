@@ -7,6 +7,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 <html>
 <head>
 	<title>SCoRe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -15,12 +16,59 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="{{ site.url }}/assets/js/skel.min.js"></script>
-	<script src="{{ site.url }}/assets/js/skel-panels.min.js"></script>
-	<script src="{{ site.url }}/assets/js/init.js"></script>
-		<link rel="stylesheet" href="{{ site.url }}/assets/css/skel-noscript.css" />
-		<link rel="stylesheet" href="{{ site.url }}/assets/css/style.css" />
-		<link rel="stylesheet" href="{{ site.url }}/assets/css/style-desktop.css" />
+	<script src="{{ site.url }}/assets/js/skel.min.js">
+    	{
+			prefix: '/assets/css/style',
+			resetCSS: true,
+			preloadStyleSheets: true,
+			boxModel: 'border',
+			grid: {
+				gutters: 50
+				},
+			breakpoints: {
+				mobile: {
+					range: '-768',
+					lockViewport: true,
+					containers: 'fluid',
+					grid: {
+						collapse: true,
+						gutters: 10
+						}
+				},
+				desktop: {
+					range: '769-',
+					containers: 1200
+				},
+				'1000px': {
+					range: '769-1200',
+					containers: 960
+				}
+			}
+	}
+    </script>
+	<script src="{{ site.url }}/assets/js/skel-panels.min.js">
+    {	
+		panels: {
+			navPanel: {
+				breakpoints: 'mobile',
+				position: 'left',
+				style: 'reveal',
+				size: '80%',
+				html: '<div data-action="navList" data-args="nav"></div>'
+				}
+			},
+			overlays: {
+				titleBar: {
+					breakpoints: 'mobile',
+					position: 'top-left',
+					height: 44,
+					width: '100%',
+					html: '<span class="toggle" data-action="togglePanel" data-args="navPanel"></span>' +
+ 	'<span class="title" data-action="copyHTML" data-args="logo"></span>'
+				}
+			}
+		}
+    </script>
 </head>
 <body style="background-color:#fff">
 
@@ -30,7 +78,7 @@ Released for free under the Creative Commons Attribution 3.0 license (templated.
 
 	</div>
 	<!-- Header -->
-	<div class="main-wrapper" style="    min-width: 678px;
+	<div class="main-wrapper" style="    
 		max-width: 978px;
 		margin: auto;
 		clear: both;
