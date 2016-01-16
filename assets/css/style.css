@@ -1138,3 +1138,8 @@ color: #000000 !important;
 			position:absolute;
 			margin-left:0;
 		}
+@media(max-width:480px){
+	#s3slider, #subbanner {
+		height:161px;
+	}
+}
