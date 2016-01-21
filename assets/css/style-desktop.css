@@ -57,7 +57,7 @@
 	    left: 50%;
 	    right: 50%;
 	    height: 1px;
-	    background: currentColor; // system color
+	    background: #000;
 	    transition: all ease .2s;
 	} 
   
