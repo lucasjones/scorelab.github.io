@@ -44,6 +44,38 @@
 	{
 		padding: 16em 0 12em 0;
 	}
+	
+	#nav > ul > li > a
+	{
+		position: relative;
+	}
+	
+	#nav ul li a:after {
+	    content: '';
+	    position: absolute;
+	    bottom: -.4em;
+	    left: 50%;
+	    right: 50%;
+	    height: 1px;
+	    background: #000;
+	    transition: all ease .2s;
+	} 
+  
+	#nav ul li a:hover:after {
+	    left: 0;
+	    right: 0;
+	    height: 2px;
+	  } 
+  
+	#nav ul li a:hover:before {
+	    position: absolute;
+	    transform: translateX(-100%);
+	    left: -10px;
+	    color: #eee;
+	    opacity: .3;
+	    font-weight: 100;
+	    font-size: .8em;
+	  }
 
 /*********************************************************************************/
 /* Main                                                                          */
