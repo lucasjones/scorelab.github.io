@@ -8,10 +8,13 @@
 		<ul class="style">
 		{% for post in site.posts offset: 0 limit: 2 %}
 			<li>
-				<p class="posted">{{ post.date | date_to_string }}  |  (10 )  Comments</p>
+				<p class="posted">{{ post.date | date_to_string }}  | <a href="{{ site.url }}{{ post.url }}#disqus_thread"></a></p>
 				<p><a href="{{ site.url }}/{{ site.prefix }}{{ post.url }}">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</a></p>
 			</li>
 		{% endfor %}
 		</ul>
 	</section>
 </div>
+
+<!-- code for comment count -->
+<script id="dsq-count-scr" src="//scorelabblog.disqus.com/count.js" async></script>

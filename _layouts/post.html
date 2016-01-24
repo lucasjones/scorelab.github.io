@@ -9,7 +9,7 @@ layout: default
 					<header>
 						<h2>{{ page.title }}</h2>
 					</header>
-					<p class="posted">Posted on {{ page.date | date: '%B %d, %Y' }}</p>
+					<p class="posted">Posted on {{ page.date | date: '%B %d, %Y' }} - <a href="{{ site.url }}{{ page.url }}#disqus_thread"></a></p>
 					{{ content }}
 
 					<div id="disqus_thread"></div>
@@ -31,3 +31,6 @@ layout: default
 			</div>
 		</div>
 	</div>
+
+	<!-- code for comment count -->
+	<script id="dsq-count-scr" src="//scorelabblog.disqus.com/count.js" async></script>
